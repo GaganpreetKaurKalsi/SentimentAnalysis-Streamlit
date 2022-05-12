@@ -9,7 +9,6 @@ from fer import FER
 import matplotlib.pyplot as plt
 import cv2
 import numpy as np
-import base64
 
 """
     Argument:
