@@ -28,7 +28,7 @@ def getPolarity(userText):
         return polarity, subjectivity, "Negative"
 
 def getSentiments(userText, type):
-    if(type == 'Positive/Negative/Neutral'):
+    if(type == 'Positive/Negative/Neutral - TextBlob'):
         polarity, subjectivity, status = getPolarity(userText)
         if(status=="Positive"):
             image = Image.open('./images/positive.PNG')
@@ -41,7 +41,7 @@ def getSentiments(userText, type):
         col2.metric("Subjectivity", subjectivity, None)
         col3.metric("Result", status, None)
         st.image(image, caption=status)
-    elif(type == 'Happy/Sad/Angry/Fear/Surprise'):
+    elif(type == 'Happy/Sad/Angry/Fear/Surprise - text2emotion'):
         emotion = dict(te.get_emotion(userText))
         col1, col2, col3, col4, col5 = st.columns(5)
         col1.metric("Happy 😊", emotion['Happy'], None)
@@ -63,11 +63,12 @@ def renderPage():
     st.text("")
     type = st.selectbox(
      'Type of analysis',
-     ('Positive/Negative/Neutral', 'Happy/Sad/Angry/Fear/Surprise'))
-    if(userText!="" and type!=None):
-        st.text("")
-        st.components.v1.html("""
-                              <h3 style="color: #0284c7; font-family: Source Sans Pro, sans-serif; font-size: 28px; margin-bottom: 10px; margin-top: 50px;">Result</h3>
-                              <hr style="border-width: 2px; border-color: #cbd5e1; outline: none; height: 0">
-                              """, height=100)
-        getSentiments(userText, type)
+     ('Positive/Negative/Neutral - TextBlob', 'Happy/Sad/Angry/Fear/Surprise - text2emotion'))
+    st.text("")
+    if st.button('Search'):
+        if(userText!="" and type!=None):
+            st.text("")
+            st.components.v1.html("""
+                                <h3 style="color: #0284c7; font-family: Source Sans Pro, sans-serif; font-size: 28px; margin-bottom: 10px; margin-top: 50px;">Result</h3>
+                                """, height=100)
+            getSentiments(userText, type)

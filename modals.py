@@ -78,12 +78,13 @@ def text2emotion(text):
 def imageEmotion(image):
     captured_emotions = emo_detector.detect_emotions(image)
     topEmotion = emo_detector.top_emotion(image)
+    print(captured_emotions, topEmotion)
     img = image
     # font
     font = cv2.FONT_HERSHEY_SIMPLEX
   
     # fontScale
-    fontScale = 1
+    fontScale = 1.2
    
     # Blue color in BGR
     color = (255, 0, 0)
@@ -97,7 +98,7 @@ def imageEmotion(image):
         emotions = sorted(emotions.items(), key =
              lambda kv:(kv[1], kv[0]))
         cv2.rectangle(img, (x,y), (x+w,y+h), (0, 0, 255), 2)
-        cv2.putText(img, emotions[len(emotions)-1][0]+" "+str(emotions[len(emotions)-1][1]), org, font, 
+        cv2.putText(img, emotions[len(emotions)-1][0], org, font, 
                    fontScale, color, thickness, cv2.LINE_AA)
     return captured_emotions, topEmotion, img
     

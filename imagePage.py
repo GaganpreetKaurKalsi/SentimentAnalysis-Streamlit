@@ -145,7 +145,7 @@ def uploadFile():
         col1, col2 = st.columns([4,2])
         
         with col1:
-            st.image(image)
+            st.image(image, width=300)
         with col2:
             st.metric("Top Emotion", topEmotion[0].capitalize() + " " + getEmoji[topEmotion[0]], None)
             st.metric("Emotion Percentage", str(round(topEmotion[1]*100, 2)), None)

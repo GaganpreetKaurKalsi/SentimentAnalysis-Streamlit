@@ -11,7 +11,21 @@ import pandas as pd
 
 
 baseURL = 'https://imdb-api.com/en/API'
-apiKey = 'k_9usdv193'
+# apiKey = 'k_9usdv193'
+apiKey = 'k_ua20om6k'
+
+getEmoji = {
+    "happy" : "😊",
+    "neutral" : "😐",
+    "sad" : "😔",
+    "disgust" : "🤢",
+    "surprise" : "😲",
+    "fear" : "😨",
+    "angry" : "😡",
+    "positive": "🙂",
+    "neutral": "😐",
+    "negative": "☹️",
+}
 
 def plotPie(labels, values):
     fig = go.Figure(
@@ -329,6 +343,14 @@ def displayMovieContent(movie):
                                 <p style="color: #64748b; font-family: Source Sans Pro, sans-serif; font-size: 14px;">{}</p>
                                 """.format(movie["title"], movie["description"]), height=150)
 
+def getEmojiString(head):
+    emojiHead = ""
+    emotions = head.split("-")
+    for emotion in emotions:
+        emo = emotion.strip()
+        emojiHead += getEmoji[emo.lower()]
+    return head+" "+emojiHead
+
 def process(movieName, packageName):
     global lastSearched, cacheData
     if(lastSearched != movieName):
@@ -368,15 +390,15 @@ def process(movieName, packageName):
                     if((i+3)<len(keys)):
                         
                         cols = st.columns(4)
-                        cols[0].metric(keys[i], round(values[i], 2), None)
-                        cols[1].metric(keys[i+1], round(values[i+1], 2), None)
-                        cols[2].metric(keys[i+2], round(values[i+2], 2), None)
-                        cols[3].metric(keys[i+3], round(values[i+3], 2), None)
+                        cols[0].metric(getEmojiString(keys[i]), round(values[i], 2), None)
+                        cols[1].metric(getEmojiString(keys[i+1]), round(values[i+1], 2), None)
+                        cols[2].metric(getEmojiString(keys[i+2]), round(values[i+2], 2), None)
+                        cols[3].metric(getEmojiString(keys[i+3]), round(values[i+3], 2), None)
                     else:
                         cols = st.columns(4)
                         for j in range(len(keys)-i):
                             print("Range Values : ", j, len(keys))
-                            cols[j].metric(keys[i+j], round(values[i+j], 2), None)
+                            cols[j].metric(getEmojiString(keys[i+j]), round(values[i+j], 2), None)
                 
                 col1, col2 = st.columns([3, 1])
                 st.write("")
