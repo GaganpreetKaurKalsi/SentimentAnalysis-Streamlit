@@ -1,10 +1,10 @@
 import streamlit as st
 import sidebar
 import textPage
-import audioPage
+# import audioPage
 import imdbReviewsPage
 import imagePage
-import twitterAnalysisPage
+# import twitterAnalysisPage
 
 # st.title("Hello")
 page = sidebar.show()
