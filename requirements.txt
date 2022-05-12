@@ -1,4 +1,4 @@
-numpy==1.17.4
+# numpy==1.20
 fer==22.4.0
 flair==0.11.1
 keras==2.8.0
