@@ -2,7 +2,7 @@ from flair.models import TextClassifier
 from flair.data import Sentence
 from textblob import TextBlob
 import nltk
-# nltk.download('vader_lexicon')
+nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import text2emotion as te
 from fer import FER
