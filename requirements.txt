@@ -17,6 +17,7 @@ opencv-contrib-python==4.5.5.64
 # opencv-python==4.5.5.64
 opencv-python-headless==4.5.5.64
 tensorflow
+sacremoses==0.0.53
 
 # absl-py==1.0.0
 # alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
