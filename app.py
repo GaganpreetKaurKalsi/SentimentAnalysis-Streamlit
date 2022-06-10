@@ -4,6 +4,7 @@ import textPage
 # import audioPage
 import imdbReviewsPage
 import imagePage
+import videoPage
 # import twitterAnalysisPage
 
 # st.title("Hello")
@@ -17,5 +18,7 @@ elif page=="IMDb movie reviews":
     imdbReviewsPage.renderPage()
 elif page=="Image":
     imagePage.renderPage()
+elif page=="Video":
+    videoPage.main()
 # elif page=="Twitter Data":
 #     twitterAnalysisPage.renderPage()

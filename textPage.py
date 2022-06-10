@@ -65,7 +65,7 @@ def renderPage():
      'Type of analysis',
      ('Positive/Negative/Neutral - TextBlob', 'Happy/Sad/Angry/Fear/Surprise - text2emotion'))
     st.text("")
-    if st.button('Search'):
+    if st.button('Predict'):
         if(userText!="" and type!=None):
             st.text("")
             st.components.v1.html("""

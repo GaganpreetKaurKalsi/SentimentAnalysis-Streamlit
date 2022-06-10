@@ -53,14 +53,14 @@ def textBlob(text):
 def vader(text):
     #analyze the sentiment for the text
     scores = SentimentIntensityAnalyzer().polarity_scores(text)
-    # print(text, " ------> ", scores)
-
-    if (scores['pos']>=scores['neu'] and scores['pos']>=scores['neg']):
-        return "POSITIVE"
-    elif (scores['neu']>=scores['pos'] and scores['neu']>=scores['neg'] ):
-        return "NEUTRAL"
-    else:
-        return "NEGATIVE"
+    if scores['compound'] >= 0.05 :
+        return "Positive"
+ 
+    elif scores['compound'] <= - 0.05 :
+        return "Negative"
+ 
+    else :
+        return "Neutral"
         
 
 # For Text data
