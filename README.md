@@ -32,14 +32,14 @@ Sentiment Analysis is one of the most famous applications of Natural Language Pr
 ## Project Components
 
 **The project currently contains 3 applications :-**
-1. **Text** - Applying sentiment analysis on text given by used.
+1. **Text** - Applying sentiment analysis on text given by the user.
 2. **IMDb movie reviews** - We get review data based on movie entered by user from the IMDb API and process the same to obtain emotions of people regarding the movie.
 3. **Image** - Here we analyze sentiments out of image uploaded by the user. We detect faces and then analyze sentiments for each.  We also calculate the sentiment of image as a whole.
 
 
 ## Video Demonstration
 
-Coming Soon
+https://user-images.githubusercontent.com/54144759/173093720-5b753229-3ea8-428d-a4cb-1384c738382e.mp4
 
 <br>
 
