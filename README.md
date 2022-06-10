@@ -2,7 +2,7 @@
 
 <br>
 
-# Sentiment Analysis App
+# Sentiment Analysis App 😊😐😔😡
 
 <br>
 
