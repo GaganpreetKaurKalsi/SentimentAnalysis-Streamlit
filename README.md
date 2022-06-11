@@ -39,7 +39,13 @@ Sentiment Analysis is one of the most famous applications of Natural Language Pr
 
 ## Video Demonstration
 
+**Application 1 - User Input**          
+
 https://user-images.githubusercontent.com/54144759/173093720-5b753229-3ea8-428d-a4cb-1384c738382e.mp4
+
+**Application 2 - IMDb reviews**   
+
+https://user-images.githubusercontent.com/54144759/173201517-909e9bc8-19cc-4667-8a8f-bd19fba75a0d.mp4
 
 <br>
 
