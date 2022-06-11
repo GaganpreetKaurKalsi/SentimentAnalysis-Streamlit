@@ -47,6 +47,11 @@ https://user-images.githubusercontent.com/54144759/173093720-5b753229-3ea8-428d-
 
 https://user-images.githubusercontent.com/54144759/173201517-909e9bc8-19cc-4667-8a8f-bd19fba75a0d.mp4
 
+**Application 3 - Image analysis** 
+
+https://user-images.githubusercontent.com/54144759/173202138-a7b0648a-ba13-471d-88d2-c91432958aab.mp4
+
+
 <br>
 
 # Important information
@@ -90,3 +95,20 @@ There are multiple libraries available in python for sentiment analysis. Let's s
 *__Note :-__* 
 1. textblob, flair and vader provide polarity score where text is declared in either of 3 states (POSITIVE🙂, NEGATIVE☹️, NEUTRAL😐)
 2. text2emotion is the only library among the others mentioned above which can classify text in 5 emotion categories (HAPPY😊, ANGRY😡, SAD😔, SURPRISE😲, FEAR😨)
+
+<br>
+
+## Project development ideas
+
+**Below mentioned applications can be implemented as a future scope -**
+- Tweets analysis using Twitter API
+- Sentiment analysis on Live video streaming
+- Sentiment analysis of Audio data
+- Sentiment analysis of data received from site given by user using web scraping in python.
+
+<br>
+
+## Thank You!
+Thank you. **I hope you liked the project**. 
+
+If you really did then don't forget to **give a star**⭐ to this repo. It would mean a lot.
